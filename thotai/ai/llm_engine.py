@@ -2,40 +2,36 @@
 import os
 import json
 from datetime import date
-from openai import OpenAI
+from groq import Groq
 from dotenv import load_dotenv
 
-load_dotenv()  # charge la clé API depuis .env
+load_dotenv()  # Load environment variables from a .env file
 
-# Initialisation du client OpenAI
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
+# Initialize Groq client
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def generate_cultural_pack(theme: str = "Découverte générale"):
     """
-    Génère un pack culturel du jour à partir d'un thème donné.
-    Utilise un modèle de langage (GPT-4 ou GPT-5) pour créer :
-    - 3 faits
-    - 1 anecdote
-    - 1 question de quiz
+    Génère un pack culturel via le modèle LLaMA3-70B de Groq.
     """
-
     prompt = f"""
-    Tu es ThotAI, une intelligence artificielle de culture générale.
+    Tu es ThotAI, une IA de culture générale érudite et concise.
     Crée un "pack culturel du jour" au format JSON.
+    Réponds UNIQUEMENT avec un objet JSON valide, sans texte avant ni après.
+
     Le pack doit contenir :
     - date (au format AAAA-MM-JJ)
-    - theme (le thème demandé)
-    - facts : une liste de 3 faits intéressants et précis sur ce thème
-    - anecdote : une anecdote courte, marquante et véridique
-    - quiz : une question simple avec 3 options et la bonne réponse
+    - theme
+    - facts : une liste de 3 faits culturels intéressants et précis
+    - anecdote : une anecdote courte, véridique et marquante
+    - quiz : une question de culture avec 3 options et la bonne réponse
 
     Thème : {theme}
 
     Format JSON attendu :
     {{
-        "date": "2025-10-16",
-        "theme": "...",
+        "date": "{date.today()}",
+        "theme": "{theme}",
         "facts": ["...", "...", "..."],
         "anecdote": "...",
         "quiz": {{
@@ -46,28 +42,27 @@ def generate_cultural_pack(theme: str = "Découverte générale"):
     }}
     """
 
-    # Appel du modèle OpenAI
+    # ✅ Ici on envoie le vrai prompt
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="llama-3.3-70b-versatile",
         messages=[
-            {"role": "system", "content": "Tu es une IA éducative spécialisée en culture générale."},
+            {"role": "system", "content": "Tu es ThotAI, une IA érudite et concise."},
             {"role": "user", "content": prompt}
-        ],
-        temperature=0.8,
+        ]
     )
 
     content = response.choices[0].message.content.strip()
+    # print("🧠 Réponse brute du modèle :", content)
 
-    # Nettoyage et parsing
+    # ✅ Vérification JSON
     try:
         data = json.loads(content)
     except json.JSONDecodeError:
-        # Si le modèle a répondu avec du texte au lieu d’un JSON propre
         data = {
             "date": str(date.today()),
             "theme": theme,
-            "facts": ["Erreur de parsing — reformule ton prompt."],
-            "anecdote": "Impossible de générer l’anecdote.",
+            "facts": ["Erreur : la sortie n’était pas du JSON valide."],
+            "anecdote": "Erreur de génération.",
             "quiz": {
                 "question": "Erreur",
                 "options": ["", "", ""],

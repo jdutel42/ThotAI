@@ -1,9 +1,10 @@
 # Import libraries
-from fastapi import FastAPI, Query # Ultra-light web framework for building APIs
+from fastapi import FastAPI, Query # FastAPI framework and Query for query parameters
 from datetime import date # Module for manipulating dates
 import json # Module for working with JSON data
 import os # Module for interacting with the operating system
 from thotai.ai.llm_engine import generate_cultural_pack # Import the function to generate cultural packs
+
 
 # http://127.0.0.1:8000/docs
 
@@ -43,3 +44,24 @@ def generate_pack(theme: str = Query("General Discovery", description="Cultural 
         json.dump(pack, f, indent=2, ensure_ascii=False) # Save the pack in a human-readable format
 
     return {"message": "Cultural pack generated successfully.", "pack": pack} # Return a success message along with the generated pack
+
+
+
+
+# Command-line interface for testing
+def main():
+    print("🧠 ThotAI – Générateur de pack culturel du jour")
+    print("------------------------------------------------")
+    theme = input("👉 Entrez un thème (ex: Mythologie égyptienne, Renaissance, Musique baroque) : ").strip()
+
+    if not theme:
+        theme = "Découverte générale"
+
+    print(f"\n⏳ Génération du pack culturel sur le thème : {theme}...\n")
+    pack = generate_cultural_pack(theme)
+
+    print("✅ Pack généré avec succès :\n")
+    print(json.dumps(pack, indent=2, ensure_ascii=False))
+
+if __name__ == "__main__":
+    main()
