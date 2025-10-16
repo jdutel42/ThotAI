@@ -1,8 +1,9 @@
 # Import libraries
-from fastapi import FastAPI # Ultra-light web framework for building APIs
+from fastapi import FastAPI, Query # Ultra-light web framework for building APIs
 from datetime import date # Module for manipulating dates
 import json # Module for working with JSON data
 import os # Module for interacting with the operating system
+from thotai.ai.llm_engine import generate_cultural_pack # Import the function to generate cultural packs
 
 # http://127.0.0.1:8000/docs
 
@@ -11,7 +12,7 @@ import os # Module for interacting with the operating system
 
 
 
-app = FastAPI(title="ThotAI", version="0.1") # API instance
+app = FastAPI(title="ThotAI", version="0.2") # API instance
 
 DATA_PATH = "data/daily_pack.json" # Path to store daily cultural pack
 
@@ -20,7 +21,7 @@ DATA_PATH = "data/daily_pack.json" # Path to store daily cultural pack
 ## Root endpoint
 @app.get("/") # Root endpoint, returns a welcome message to verify the API is running
 def root():
-    return {"message": "Welcome to ThotAI — the AI for general culture."}
+    return {"message": "Welcome to ThotAI — the dynamic AI for general culture."}
 
 ## Today's cultural pack endpoint
 @app.get("/pack/today") # Endpoint to retrieve today's cultural pack stored in a JSON file
@@ -33,23 +34,9 @@ def get_today_pack():
 
 ## Generate cultural pack endpoint
 @app.post("/pack/generate") # Endpoint to generate a new cultural pack (python dictionary) and save it to a JSON file
-def generate_pack():
+def generate_pack(theme: str = Query("General Discovery", description="Cultural theme for the pack.")):
     """Generates a simple cultural pack."""
-    pack = {
-        "date": str(date.today()),
-        "theme": "Random Discovery",
-        "facts": [
-            "The Great Wall of China is over 21,000 km long.",
-            "The human brain contains about 86 billion neurons.",
-            "Victor Hugo wrote 'Les Misérables' in exile in Guernsey."
-        ],
-        "anecdote": "The word 'poubelle' comes from the prefect Eugène Poubelle (1831–1907).",
-        "quiz": {
-            "question": "Which painter created 'The Starry Night'?",
-            "options": ["Monet", "Van Gogh", "Manet"],
-            "answer": "Van Gogh"
-        }
-    }
+    pack = generate_cultural_pack(theme) # Generate the pack using the provided theme
 
     os.makedirs("data", exist_ok=True) # Ensure the data directory exists
     with open(DATA_PATH, "w", encoding="utf-8") as f: # Write the pack to a JSON file
