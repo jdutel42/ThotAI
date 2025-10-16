@@ -8,7 +8,7 @@
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/<your_username>/ThotAI.git
+git clone https://github.com/jdutel42/ThotAI.git
 cd ThotAI
 python -m venv .venv
 source .venv/bin/activate  # or .venv\Scripts\activate on Windows
