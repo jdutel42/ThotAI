@@ -1,0 +1,19 @@
+{
+  "date": "2025-10-16",
+  "theme": "Mythologie égyptienne",
+  "facts": [
+    "Les anciens Égyptiens croyaient en un cosmos complexe avec des dieux et des déesses qui régnaient sur différents aspects de la vie et de l'univers.",
+    "Le dieu principal du panthéon égyptien était Râ, le dieu du soleil, souvent représenté avec une tête de faucon.",
+    "L'Égypte antique pratiquait la momification, croyant que le corps devait être préservé pour qu'il puisse être réanimé dans l'au-delà."
+  ],
+  "anecdote": "Selon la légende, le dieu Osiris fut tué et démembré par son frère Seth, mais fut ressuscité par sa femme Isis, symbolisant le cycle de la vie et de la mort.",
+  "quiz": {
+    "question": "Quel était le nom de la déesse égyptienne de la magie et de la protection qui était souvent représentée comme une femme avec la tête d'un chat ?",
+    "options": [
+      "Isis",
+      "Bastet",
+      "Nephthys"
+    ],
+    "answer": "Bastet"
+  }
+}
