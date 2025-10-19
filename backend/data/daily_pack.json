@@ -1,19 +1,19 @@
 {
   "date": "2025-10-19",
-  "theme": "Gladiateur",
+  "theme": "Toulouse",
   "facts": [
-    "Les gladiateurs étaient souvent des prisonniers de guerre, des esclaves ou des condamnés qui se battaient dans des arènes pour divertir le public romain.",
-    "Il existait différentes catégories de gladiateurs, comme les murmillos, les thraces et les secutores, chacune avec son propre style de combat et son équipement distinct.",
-    "Les jeux de gladiateurs, appelés munera, étaient souvent organisés par des riches Romains pour célébrer des occasions spéciales, comme l'inauguration d'un nouveau bâtiment ou la mort d'un membre de la famille."
+    "Toulouse est souvent surnommée la « Ville Rose » en raison de la couleur des briques de terre cuite utilisées dans la construction de nombreux bâtiments.",
+    "La ville abrite le célèbre musée des Augustins, qui présente une collection d'art et d'archéologie allant de l'Antiquité au XXe siècle.",
+    "Toulouse est le berceau de l'industrie aéronautique française, avec des entreprises comme Airbus ayant leurs racines dans la ville."
   ],
-  "anecdote": "Selon la légende, le gladiateur Spartacus, qui mena une révolte d'esclaves contre la République romaine en 73 av. J.-C., était un Thrace qui avait été réduit en esclavage et devenu gladiateur avant de s'évader et de prendre les armes contre ses anciens maîtres.",
+  "anecdote": "Clément Ader, un inventeur toulousain, a réalisé le premier vol motorisé en 1890 avec son appareil, l'Éole, bien que non contrôlé et sur une courte distance, marquant ainsi un début dans l'histoire de l'aviation.",
   "quiz": {
-    "question": "Quel était le nom de l'arène la plus célèbre de Rome où se déroulaient les combats de gladiateurs ?",
+    "question": "Quel est le nom de la rivière qui traverse Toulouse ?",
     "options": [
-      "Colisée",
-      "Forum romain",
-      "Théâtre de Pompée"
+      "Rivière Garonne",
+      "Rivière Dordogne",
+      "Rivière Loire"
     ],
-    "answer": "Colisée"
+    "answer": "Rivière Garonne"
   }
 }

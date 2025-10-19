@@ -11,11 +11,10 @@ from thotai.ai.llm_engine import generate_cultural_pack
 
 app = FastAPI(title="ThotAI", version="0.3")
 
-# Activer CORS pour React frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],  # Frontend React
-    allow_methods=["*"],
+    allow_methods=["*"],                      # Autorise POST, GET, OPTIONS...
     allow_headers=["*"],
 )
 
