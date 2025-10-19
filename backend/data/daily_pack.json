@@ -1,0 +1,19 @@
+{
+  "date": "2025-10-19",
+  "theme": "Gladiateur",
+  "facts": [
+    "Les gladiateurs étaient souvent des prisonniers de guerre, des esclaves ou des condamnés qui se battaient dans des arènes pour divertir le public romain.",
+    "Il existait différentes catégories de gladiateurs, comme les murmillos, les thraces et les secutores, chacune avec son propre style de combat et son équipement distinct.",
+    "Les jeux de gladiateurs, appelés munera, étaient souvent organisés par des riches Romains pour célébrer des occasions spéciales, comme l'inauguration d'un nouveau bâtiment ou la mort d'un membre de la famille."
+  ],
+  "anecdote": "Selon la légende, le gladiateur Spartacus, qui mena une révolte d'esclaves contre la République romaine en 73 av. J.-C., était un Thrace qui avait été réduit en esclavage et devenu gladiateur avant de s'évader et de prendre les armes contre ses anciens maîtres.",
+  "quiz": {
+    "question": "Quel était le nom de l'arène la plus célèbre de Rome où se déroulaient les combats de gladiateurs ?",
+    "options": [
+      "Colisée",
+      "Forum romain",
+      "Théâtre de Pompée"
+    ],
+    "answer": "Colisée"
+  }
+}
