@@ -1,19 +1,19 @@
 {
-  "date": "2025-10-16",
-  "theme": "Mythologie égyptienne",
+  "date": "2025-10-19",
+  "theme": "Gladiateur",
   "facts": [
-    "Les anciens Égyptiens croyaient en un cosmos complexe avec des dieux et des déesses qui régnaient sur différents aspects de la vie et de l'univers.",
-    "Le dieu principal du panthéon égyptien était Râ, le dieu du soleil, souvent représenté avec une tête de faucon.",
-    "L'Égypte antique pratiquait la momification, croyant que le corps devait être préservé pour qu'il puisse être réanimé dans l'au-delà."
+    "Les gladiateurs étaient souvent des prisonniers de guerre, des esclaves ou des condamnés qui se battaient dans des arènes pour divertir le public romain.",
+    "Il existait différentes catégories de gladiateurs, comme les murmillos, les thraces et les secutores, chacune avec son propre style de combat et son équipement distinct.",
+    "Les jeux de gladiateurs, appelés munera, étaient souvent organisés par des riches Romains pour célébrer des occasions spéciales, comme l'inauguration d'un nouveau bâtiment ou la mort d'un membre de la famille."
   ],
-  "anecdote": "Selon la légende, le dieu Osiris fut tué et démembré par son frère Seth, mais fut ressuscité par sa femme Isis, symbolisant le cycle de la vie et de la mort.",
+  "anecdote": "Selon la légende, le gladiateur Spartacus, qui mena une révolte d'esclaves contre la République romaine en 73 av. J.-C., était un Thrace qui avait été réduit en esclavage et devenu gladiateur avant de s'évader et de prendre les armes contre ses anciens maîtres.",
   "quiz": {
-    "question": "Quel était le nom de la déesse égyptienne de la magie et de la protection qui était souvent représentée comme une femme avec la tête d'un chat ?",
+    "question": "Quel était le nom de l'arène la plus célèbre de Rome où se déroulaient les combats de gladiateurs ?",
     "options": [
-      "Isis",
-      "Bastet",
-      "Nephthys"
+      "Colisée",
+      "Forum romain",
+      "Théâtre de Pompée"
     ],
-    "answer": "Bastet"
+    "answer": "Colisée"
   }
 }

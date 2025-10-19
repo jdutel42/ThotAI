@@ -7,6 +7,8 @@
 
 ## 🚀 Installation
 
+### 1. Clone the repository and set up Python backend
+
 ```bash
 git clone https://github.com/jdutel42/ThotAI.git
 cd ThotAI
@@ -15,13 +17,20 @@ source .venv/bin/activate  # or .venv\Scripts\activate on Windows
 pip install -r requirements.txt
 ```
 
+### 2. Set up the React frontend
+
+```bash
+cd frontend
+npm install
+```
+
+> Tailwind CSS is already configured in the frontend using Tailwind v4.
+
 ---
 
 ## 🎯 Usage
 
-### 1. Generate an interactive cultural pack
-
-Run the main script and enter a theme in the terminal:
+### 1. Run the interactive cultural pack (terminal)
 
 ```bash
 python -m thotai.main
@@ -55,17 +64,37 @@ python -m thotai.main
 }
 ```
 
-> The theme you enter will be used to generate the daily pack. If you leave it blank, the default theme `"General Discovery"` will be used.
+> Leaving the theme blank will use the default `"General Discovery"` theme.
 
 ---
 
-### 2. (Optional) Run in server mode
-
-If you want to use ThotAI via an API or web interface, start the Uvicorn server:
+### 2. Run the backend API server
 
 ```bash
 uvicorn thotai.main:app --reload
 ```
+
+The API endpoints:
+
+| Endpoint      | Method | Description                                                             |
+| ------------- | ------ | ----------------------------------------------------------------------- |
+| `/`           | GET    | Check API status                                                        |
+| `/pack/today` | GET    | Retrieve today's cultural pack                                          |
+| `/generate`   | POST   | Generate a new cultural pack with JSON body `{ "theme": "Your Theme" }` |
+
+---
+
+### 3. Run the frontend web app
+
+```bash
+cd frontend
+npm start
+```
+
+* Open your browser at `http://localhost:3000`
+* Enter a theme → click “Generate Pack” → view the results returned from the backend.
+
+> Frontend is built with **React** + **Tailwind CSS v4** for a modern responsive design.
 
 ---
 
@@ -73,13 +102,19 @@ uvicorn thotai.main:app --reload
 
 ```
 ThotAI/
-├── thotai/
+├── backend/
 │   ├── __init__.py
-│   ├── main.py             # Interactive entry point
+│   ├── main.py             # FastAPI backend
 │   └── ai/
 │       ├── __init__.py
 │       └── llm_engine.py   # Cultural pack generation
-├── .venv/                  # Virtual environment
+├── frontend/
+│   ├── package.json
+│   ├── src/
+│   │   ├── App.js          # React main page
+│   │   ├── index.js        # React entry point
+│   │   └── index.css       # Tailwind + global styles
+├── .venv/                  # Python virtual environment
 ├── requirements.txt
 └── README.md
 ```
