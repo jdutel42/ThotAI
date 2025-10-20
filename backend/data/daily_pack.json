@@ -1,19 +1,19 @@
 {
-  "date": "2025-10-19",
-  "theme": "Toulouse",
+  "date": "2025-10-20",
+  "theme": "Wallonie",
   "facts": [
-    "Toulouse est souvent surnommée la « Ville Rose » en raison de la couleur des briques de terre cuite utilisées dans la construction de nombreux bâtiments.",
-    "La ville abrite le célèbre musée des Augustins, qui présente une collection d'art et d'archéologie allant de l'Antiquité au XXe siècle.",
-    "Toulouse est le berceau de l'industrie aéronautique française, avec des entreprises comme Airbus ayant leurs racines dans la ville."
+    "La Wallonie est l'une des trois régions de la Belgique, couvrant approximativement 55% du territoire du pays.",
+    "La région wallonne est divisée en cinq provinces : le Hainaut, le Brabant wallon, Liège, Luxembourg et Namur.",
+    "La Wallonie est connue pour son patrimoine industriel et minier, avec des sites tels que le Bois du Cazier, classé au patrimoine mondial de l'UNESCO."
   ],
-  "anecdote": "Clément Ader, un inventeur toulousain, a réalisé le premier vol motorisé en 1890 avec son appareil, l'Éole, bien que non contrôlé et sur une courte distance, marquant ainsi un début dans l'histoire de l'aviation.",
+  "anecdote": "Lors de la révolution belge de 1830, les Wallons ont joué un rôle clé dans la lutte pour l'indépendance de la Belgique vis-à-vis des Pays-Bas.",
   "quiz": {
-    "question": "Quel est le nom de la rivière qui traverse Toulouse ?",
+    "question": "Quelle est la capitale de la Wallonie ?",
     "options": [
-      "Rivière Garonne",
-      "Rivière Dordogne",
-      "Rivière Loire"
+      "Bruxelles",
+      "Namur",
+      "Liège"
     ],
-    "answer": "Rivière Garonne"
+    "answer": "Namur"
   }
 }
