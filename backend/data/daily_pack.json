@@ -1,19 +1,19 @@
 {
   "date": "2025-10-20",
-  "theme": "Wallonie",
+  "theme": "Phil Collins",
   "facts": [
-    "La Wallonie est l'une des trois régions de la Belgique, couvrant approximativement 55% du territoire du pays.",
-    "La région wallonne est divisée en cinq provinces : le Hainaut, le Brabant wallon, Liège, Luxembourg et Namur.",
-    "La Wallonie est connue pour son patrimoine industriel et minier, avec des sites tels que le Bois du Cazier, classé au patrimoine mondial de l'UNESCO."
+    "Phil Collins est un musicien, chanteur et producteur britannique né le 30 janvier 1951 à Chiswick, Londres.",
+    "Il est connu pour sa carrière solo réussie, mais a également été le batteur et chanteur du groupe Genesis.",
+    "Phil Collins a remporté de nombreux prix, dont huit Grammy Awards, et a été intronisé au Rock and Roll Hall of Fame deux fois, en tant que membre de Genesis et en tant qu'artiste solo."
   ],
-  "anecdote": "Lors de la révolution belge de 1830, les Wallons ont joué un rôle clé dans la lutte pour l'indépendance de la Belgique vis-à-vis des Pays-Bas.",
+  "anecdote": "Phil Collins a fait l'histoire en étant l'unique artiste à avoir joué sur scène à la fois à Londres et à Philadelphie le même jour, le 13 juillet 1985, lors du concert Live Aid.",
   "quiz": {
-    "question": "Quelle est la capitale de la Wallonie ?",
+    "question": "Quel est le titre de la chanson la plus célèbre de Phil Collins, sortie en 1981 ?",
     "options": [
-      "Bruxelles",
-      "Namur",
-      "Liège"
+      "In the Air Tonight",
+      "Sussudio",
+      "Another Day in Paradise"
     ],
-    "answer": "Namur"
+    "answer": "In the Air Tonight"
   }
 }
