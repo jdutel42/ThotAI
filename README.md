@@ -24,13 +24,17 @@ cd frontend
 npm install
 ```
 
-> Tailwind CSS is already configured in the frontend using Tailwind v4.
-
 ---
 
 ## 🎯 Usage
 
-### 1. Run the interactive cultural pack (terminal)
+### 1. Run the Backend & Frontend with the python script
+
+```bash
+python start_thotai.py
+```             
+
+### 2. Run the interactive cultural pack (terminal)
 
 ```bash
 python -m thotai.main
