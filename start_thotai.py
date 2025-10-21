@@ -1,6 +1,8 @@
 import subprocess
 import os
 import platform
+import shutil
+import sys
 
 # -------------------------
 # Fonctions utilitaires
@@ -52,7 +54,7 @@ else:
 # -------------------------
 
 # Backend
-backend_command = f'{venv_activate} && uvicorn thotai.main:app --reload'
+backend_command = f'{venv_activate} && uvicorn backend.main:app --reload'
 print("🚀 Démarrage du backend...")
 subprocess.Popen(backend_command, shell=True)
 

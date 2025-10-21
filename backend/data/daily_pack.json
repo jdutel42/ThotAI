@@ -1,19 +1,19 @@
 {
-  "date": "2025-10-20",
-  "theme": "Phil Collins",
+  "date": "2025-10-21",
+  "theme": "Coton de Tuléard",
   "facts": [
-    "Phil Collins est un musicien, chanteur et producteur britannique né le 30 janvier 1951 à Chiswick, Londres.",
-    "Il est connu pour sa carrière solo réussie, mais a également été le batteur et chanteur du groupe Genesis.",
-    "Phil Collins a remporté de nombreux prix, dont huit Grammy Awards, et a été intronisé au Rock and Roll Hall of Fame deux fois, en tant que membre de Genesis et en tant qu'artiste solo."
+    "Le Coton de Tuléar est une race de chien originaire de Madagascar",
+    "Il est connu pour son pelage lisse et soyeux qui ressemble à de la laine de coton",
+    "Le Coton de Tuléar est généralement de petite taille, avec une hauteur au garrot d'environ 25-30 cm"
   ],
-  "anecdote": "Phil Collins a fait l'histoire en étant l'unique artiste à avoir joué sur scène à la fois à Londres et à Philadelphie le même jour, le 13 juillet 1985, lors du concert Live Aid.",
+  "anecdote": "Le Coton de Tuléar a été le compagnon de choix de la reine de Madagascar, Ranavalona III, au XIXe siècle",
   "quiz": {
-    "question": "Quel est le titre de la chanson la plus célèbre de Phil Collins, sortie en 1981 ?",
+    "question": "Quelle est l'origine du Coton de Tuléar ?",
     "options": [
-      "In the Air Tonight",
-      "Sussudio",
-      "Another Day in Paradise"
+      "France",
+      "Madagascar",
+      "Italie"
     ],
-    "answer": "In the Air Tonight"
+    "answer": "Madagascar"
   }
 }

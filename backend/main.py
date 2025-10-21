@@ -13,7 +13,7 @@ app = FastAPI(title="ThotAI", version="0.3")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Frontend React
+    allow_origins=["*"],  # Frontend React
     allow_methods=["*"],                      # Autorise POST, GET, OPTIONS...
     allow_headers=["*"],
 )
