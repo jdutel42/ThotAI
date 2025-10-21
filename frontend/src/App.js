@@ -119,6 +119,23 @@ function App() {
     document.documentElement.classList.toggle("dark", darkMode);
   }, [darkMode]);
 
+  
+  useEffect(() => {
+  const fetchHistory = async () => {
+    try {
+      const res = await fetch("http://127.0.0.1:8000/history");
+      const data = await res.json();
+      setPacksHistory(data || []); // si undefined → on met []
+    } catch (error) {
+      console.error(error);
+      setPacksHistory([]); // par sécurité
+    }
+  };
+
+  fetchHistory();
+}, []);
+
+
   const generatePack = async () => {
     if (!theme.trim()) {
       setError("⚠️ Tu dois entrer un thème !");
@@ -196,7 +213,7 @@ function App() {
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">Date : {p.date}</p>
 
                 <div className="space-y-2">
-                  {p.facts.map((fact, i) => (
+                  {p.facts?.map((fact, i) => (
                     <p
                       key={i}
                       className="text-gray-700 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors duration-200"
@@ -212,7 +229,7 @@ function App() {
                   </p>
                 )}
 
-                {p.quiz && (
+                {/* {p.quiz && (
                   <div className="mt-4 p-3 bg-indigo-50 dark:bg-indigo-900 rounded transition-colors duration-200">
                     <p className="font-semibold dark:text-gray-200">❓ {p.quiz.question}</p>
                     <ul className="list-disc list-inside ml-2 dark:text-gray-300">
@@ -224,7 +241,27 @@ function App() {
                       ✅ Réponse : {p.quiz.answer}
                     </p>
                   </div>
+                )} */}
+
+                {p.quiz && (
+                  <div className="mt-4 p-3 bg-indigo-50 dark:bg-indigo-900 rounded">
+                    <p className="font-semibold dark:text-gray-200">❓ {p.quiz.question}</p>
+
+                    <ul className="list-disc list-inside ml-2 dark:text-gray-300">
+                      {p.quiz.options.map((opt, i) => (
+                        <li key={i}>{opt}</li>
+                      ))}
+                    </ul>
+
+                    <details className="mt-2 cursor-pointer">
+                      <summary className="text-indigo-600 dark:text-indigo-400">👁️ Révéler la réponse</summary>
+                      <p className="mt-2 font-semibold text-green-600 dark:text-green-400">
+                        ✅ {p.quiz.answer}
+                      </p>
+                    </details>
+                  </div>
                 )}
+
 
                 {p.anecdote && (
                   <button
