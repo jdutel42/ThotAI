@@ -1,19 +1,19 @@
 {
-  "date": "2025-10-21",
-  "theme": "Coton de Tuléard",
+  "date": "2025-10-22",
+  "theme": "Groenland",
   "facts": [
-    "Le Coton de Tuléar est une race de chien originaire de Madagascar",
-    "Il est connu pour son pelage lisse et soyeux qui ressemble à de la laine de coton",
-    "Le Coton de Tuléar est généralement de petite taille, avec une hauteur au garrot d'environ 25-30 cm"
+    "Le Groenland est le plus grand île du monde avec une superficie de 2 166 086 km².",
+    "La langue officielle du Groenland est le groenlandais, mais la majorité de la population parle également le danois.",
+    "Le Groenland est riche en ressources naturelles, notamment le pétrole, le gaz, les minéraux et la pêche."
   ],
-  "anecdote": "Le Coton de Tuléar a été le compagnon de choix de la reine de Madagascar, Ranavalona III, au XIXe siècle",
+  "anecdote": "Le Groenland a été colonisé par les Vikings au Xe siècle, et son nom signifie 'terre verte' en vieil islandais, bien que le climat y soit actuellement très froid et glacial.",
   "quiz": {
-    "question": "Quelle est l'origine du Coton de Tuléar ?",
+    "question": "Quelle est la capitale du Groenland ?",
     "options": [
-      "France",
-      "Madagascar",
-      "Italie"
+      "Nuuk",
+      "Copenhague",
+      "Reykjavik"
     ],
-    "answer": "Madagascar"
+    "answer": "Nuuk"
   }
 }
